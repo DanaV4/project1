@@ -31,6 +31,7 @@ public class Employee {
           return this.lastName;
       }
       public void setsalary(double salary){
+          if (salary >0)
           this.salary=salary;
       }
       public double getsalary(){
