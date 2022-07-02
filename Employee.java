@@ -43,6 +43,16 @@ public class Employee {
       public int getid(){
           return this.id;
       }
+     public double calSalary(int hours, double overTimePerHours){
+          double newSal=this.salary ;
+          final int workingHours=40;
+          if(hours>workingHours){
+              int addHours=hours-workingHours;
+              double addSal=addHours * overTimePerHours;
+                newSal+=addSal;
+          }
+          return newSal;
+      }
 
     @Override
     public String toString() {
